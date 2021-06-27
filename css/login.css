@@ -1,0 +1,354 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.btnCerrarDialogos{
+position: absolute;
+top: 10px;
+right: 20px;
+color: #fff;
+width: 50PX;
+cursor: pointer;
+z-index: 10;
+
+}
+#auxForm,#nosotros,#colegiatura{
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	background-color: rgba(0,0,0,0.502);
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 48% 48%;	
+	grid-gap: 4%;
+}
+#nosotros{
+	overflow: hidden;
+}
+.misionvision{
+background-color: #af3a2e;
+padding: 30px;
+color: #fff;
+font-family: segoe ui light;
+position: relative;
+}
+.colegiaturas{
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+}
+.fondoModal{
+	z-index: 5;
+	background-color: rgba(0,0,0,0.4);
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.contenidoModal{
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	width: 60%;
+	background: linear-gradient(135deg, rgba(219,126,109,1) 0%, rgba(201,88,69,1) 49%, rgba(183,56,55,1) 100%); 
+	animation:animacionArriba 0.6s;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.btnClase{
+padding: 13px;
+color: #fff;
+width: 60px;
+cursor: pointer;
+}
+
+.menuPrincipal{
+	width: 100%;
+	height: 100px;
+	/*background-color: #b52a2a;*/
+	/*background: linear-gradient(to right, rgba(247,107,107,1) 0%, rgba(181,55,54,1) 100%);*/
+background: linear-gradient(135deg, rgba(205,97,85,1) 0%, rgba(169,50,38,1) 48%, rgba(146,43,33,1) 100%);
+	
+	position: absolute;
+	top: 0;
+	z-index: 5;
+	/*opacity: .9;
+	border-bottom: solid #fff 2px;*/
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+}
+.auxCenter{
+	width: 70%;
+	margin: 0 auto;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+.latIzquier,.lateDerec{
+	width: 50%;
+	float: left;
+    overflow: hidden;
+
+}
+.latIzquier{
+	display: flex;
+	align-items: center;
+}
+
+.logoPrincipal{
+	width: 65px;
+	float: left;
+	margin-right: 20px;
+}
+
+.btnIniciaSesion{
+background-color: #ab3529;
+padding: 10px 25px;
+border-radius: 50px;
+box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+cursor: pointer;
+}
+.textoPrincipal,.textoPrincipal2{
+	font-family: "segoe ui light";
+	color: #fff;
+	font-size: 1.5em;
+	display: block;
+}
+.textoPrincipal2{
+text-align: center;
+}
+.carruselPrincipal{
+	width: 100%;
+	height: 100%;
+	/* background-image: url("../img/20170811_082433.jpg");
+	background-size:100% 100%;*/
+}
+.imgcarrusel,.imgFachada,.imgcarruselPub{
+	width: 100%;
+	height: 100%;
+	display: none;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.imgFachada{
+	display: block;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+ul{
+	list-style-type: none;
+	/*position: absolute;
+	right: 0;
+*/
+	overflow: hidden;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+
+}
+li{
+	float: left;
+	margin: 0 10px;
+	font-size: 25px;
+/*	padding: 20px;*/
+}
+#formuPlat{
+	position: relative;
+	width: 30%;
+	background: linear-gradient(135deg, rgba(219,126,109,1) 0%, rgba(201,88,69,1) 49%, rgba(183,56,55,1) 100%); 
+	animation:animatezoom 0.6s;
+}
+.logoForm{
+
+	display: block;
+	width: 25%;
+	margin: 30px auto 0;
+}
+.imgcarruselPub,.fachadaPrincipal{
+	display: none;
+}
+.camposIngreso,.camposIngresoClase{
+	padding: 10px 0;
+	width: 80%;
+	display: block;
+	border: none;
+	margin: 30px auto;
+	font-size: 25px;
+	font-family: "segoe ui light";
+	border-radius: 10px;
+	text-align: center;
+
+}
+.camposIngresoClase{
+	border: #f4f4f4 solid 1px;
+
+}
+
+.btnIniciar{
+	background-color: #be453d;
+	color: #fff;
+	border-radius: 50px;
+	border: solid #fff 1px;
+}
+
+
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+@keyframes animacionArriba{
+	from{top: -200px;opacity:0} to{top: 0;opacity:1}
+}
+.animaIzquier{
+	animation: animacionIzquierda  0.6s;
+}
+.animaDere{
+	animation: animacionDerecha  0.6s;
+}
+.animaArriba{
+	animation: animacionArriba .5s;
+	
+}
+
+@keyframes animacionDerecha{
+	from{right: -200px;opacity:0} to{right: 0;opacity:1}
+}
+@keyframes animacionIzquierda{
+	from{left: -200px;opacity:0} to{left: 0;opacity:1}
+}
+.icone-menu{
+	display: none;
+}
+
+.btnTutorial{
+	position: absolute;
+bottom: 0;
+right: 0;
+width: 150px;
+background-color: #ab3529;
+padding: 10px 25px;
+border-radius: 50px;
+box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+cursor: pointer;
+text-decoration: none;
+text-align: center;
+color: #fff;
+font-family: "segoe ui light";
+}
+
+.auxForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 600px) {
+
+.contenidoModal{
+	width: 100%
+}
+	.menuPrincipal{
+		height: initial;
+	}
+	.latIzquier{
+		justify-content: center;
+	}
+	
+.lateDerec{
+display: none;
+}
+.latIzquier{
+	width: 100%;
+	display: initial;
+}
+.logoPrincipal{
+	float: initial;
+	margin: 0 auto;
+	display: block;
+}
+.imgcarrusel,.imgFachada{
+height: initial;
+margin-top: 120px;
+}
+.imgcarrusel,.imgcarruselPub{
+margin-top: 10px;
+
+}
+.fachadaPrincipal{
+	display: block;
+}
+.contenido,.contenidoAdmin{
+
+    grid-template-columns: auto;
+}
+.carruselPrincipal,body{
+	height: initial;
+}
+
+.textoPrincipal{
+	text-align: center;
+	font-size: 1.5em;
+	margin: 5px 0;
+}
+.icone-menu{
+	display: block;	
+
+    position: absolute;
+    top:50%;
+    right: 2%;
+    transform: translate(0%,-50%);
+    width: 10%;
+    text-align: center;
+    color: #fff;
+}
+ul{
+	display: block;
+	width: initial;
+	height: initial;
+}
+ul>.textoPrincipal{
+	margin: 15px auto;
+}
+
+#formuPlat{
+	width: 90%;
+}
+li{
+	float: initial;
+}
+
+.btnCerrarDialogos{
+
+top: 5px;
+right: 5px;
+color: #fff;
+width: 40PX;
+
+}
+
+}
